@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const rateLimit = require('express-rate-limit');
+// const rateLimit = require('express-rate-limit');
 const { errors } = require('celebrate');
 // const cors = require('cors');
 const routerUsers = require('./routes/users');
