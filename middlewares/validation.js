@@ -33,7 +33,7 @@ const validationUpdateUser = celebrate({
 
 const validationGetUser = celebrate({
   params: Joi.object().keys({
-    userId: Joi.string().required().hex().length(24),
+    userId: Joi.string().alphanum().length(24).hex(),
   }),
 });
 

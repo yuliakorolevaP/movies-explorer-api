@@ -1,4 +1,3 @@
-
 const mongoose = require('mongoose');
 const validator = require('validator');
 
@@ -12,7 +11,6 @@ const userSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
-
   password: {
     type: String,
     required: true,
@@ -22,7 +20,8 @@ const userSchema = new mongoose.Schema({
     type: String,
     minlength: 2,
     maxlength: 30,
+    default: 'Имя пользователя',
   },
-  });
+});
 
 module.exports = mongoose.model('user', userSchema);
