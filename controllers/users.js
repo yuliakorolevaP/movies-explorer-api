@@ -35,8 +35,8 @@ module.exports.createUser = (req, res, next) => {
 module.exports.updateUser = (req, res, next) => {
   User.findByIdAndUpdate(
     { _id: req.user._id },
-    { name: req.body.name },
-
+    { name: req.body.name, email: req.body.email },
+    { new: true, runValidators: true },
   ).then((user) => {
     if (!user) {
       throw new NotFound(messageError.NotFound);
