@@ -14,7 +14,7 @@ const errorHandler = require('./middlewares/errorHandler');
 const { PORT = 3000 } = process.env;
 mongoose.connect(NODE_ENV === 'production' ? DB_URL : 'mongodb://127.0.0.1:27017/bitfilmsdb');
 const app = express();
-app.use(cors({ origin: ['https://localhost:3000', 'https://localhost:3001', 'http://localhost:3001', 'http://localhost:3000'] }));
+app.use(cors({ origin: ['http://yulia.students.nomoredomainsrocks.ru', 'https://yulia.students.nomoredomainsrocks.ru', 'https://localhost:3000', 'https://localhost:3001', 'http://localhost:3001', 'http://localhost:3000'] }));
 app.use(requestLogger);
 app.use(helmet());
 app.use(limiter);
